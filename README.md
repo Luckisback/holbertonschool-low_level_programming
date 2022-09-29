@@ -35,7 +35,7 @@ You are expected to be able to explain to anyone, without the help of Google.
 #### `Info`
 
 __*Pour l'instant je vous partage ici mon profil Linkedin en attendant de futur projet Devops*__ 
-[*Mon profil Linkedin*](https://markdownlivepreview.com/). 
+[*Mon profil Linkedin*](https://www.linkedin.com/feed/). 
 
 ## Ressources  :earth_africa:
 [*Everything you need to know to start with C.pdf *](https://intranet.hbtn.io/rltoken/XD2enUOSVFbnWTe9TeMy-A)
