@@ -11,16 +11,16 @@ int main(void)
 {
 	int i;
 
-	for (i = 48; i < 57; i++)
-		if (i != 9)
+	for (i = 48; i < 58; i++)
+		if (i == 57)
 		{
 			putchar(i);
-			putchar(44);
-			putchar(27);
 		}
 		else
 		{
 			putchar(i);
+			putchar(44);
+			putchar(32);
 		}
 	return (0);
 }
