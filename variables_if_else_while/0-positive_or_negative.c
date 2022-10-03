@@ -3,10 +3,10 @@
 #include <time.h>
 
 /**
- * main - Fuction that show if the number is positive or negative
- *
- * Return: exit status code. 0 for success
- */
+* main - Entry point
+* Return: Always 0 (Success)
+*
+*/
 
 int main(void)
 {
