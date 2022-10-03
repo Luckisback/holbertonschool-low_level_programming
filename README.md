@@ -30,12 +30,12 @@ You are expected to be able to explain to anyone, without the help of Google.
 9. How to find the right header to include in your source code when using a standard library function
 10. What is the official C coding style and how to check your code with `betty-style`
    
-```
+
    
 #### `Info`
 
 __*Pour l'instant je vous partage ici mon profil Linkedin en attendant de futur projet Devops*__ 
-[*Mon profil Linkedin*](https://markdownlivepreview.com/). 
+[*Mon profil Linkedin*](https://www.linkedin.com/feed/). 
 
 ## Ressources  :earth_africa:
 [*Everything you need to know to start with C.pdf *](https://intranet.hbtn.io/rltoken/XD2enUOSVFbnWTe9TeMy-A)
@@ -48,5 +48,4 @@ __*Pour l'instant je vous partage ici mon profil Linkedin en attendant de futur 
 [*Betty Coding Style*](https://intranet.hbtn.io/rltoken/GQphLz55nty5zAzT6XAkOA)
 
 
-```
 #    :spider_web: :spider_web: :spider_web:
