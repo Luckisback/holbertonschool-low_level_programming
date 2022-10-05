@@ -1,8 +1,0 @@
-school : main.o school.o
-	gcc -o school main.o school.o
-
-main.o : m.h main.c
-	gcc -c -Wall m.h main.c
-
-school.o : school.c
-	gcc -c -Wall m.h school.c
