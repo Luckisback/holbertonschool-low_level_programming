@@ -7,25 +7,25 @@
 
 void times_table(void)
 {
-	int x, c, y, i;
-
-	y = 0;
+	int x, c, i;
 
 	for (c = 0; c <= 9; c++)
 	{
 		for (x = 0; x <= 9; x++)
 		{
-			i = (x * y);
+			i = (x * c);
+
 			if (i > 9)
 				_putchar(i / 10 + '0');
+			else
+				_putchar(' ');
 			_putchar(i % 10 + '0');
-			if (x < 9)
-			{
-				_putchar(44);
-				_putchar(32);
-			}
+
+			if (x == 9)
+				continue;
+			_putchar(',');
+			_putchar(' ');
 		}
-		y = y + 1;
 		_putchar('\n');
 	}
 }
