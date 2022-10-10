@@ -2,7 +2,7 @@
 
 /**
  * _puts -  function to print entering char
- * @str - argument (pointer)
+ * @str: argument (pointer)
  *
  */
 
