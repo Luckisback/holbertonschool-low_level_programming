@@ -10,7 +10,7 @@ char *string_toupper(char *lc)
 {
 	int = 0;
 
-	while (str[i])
+	while (lc[i])
 	{
 		if (lc[i] >= 'a' && lc[i] <= 'z')
 			lc[i] -= 32;
@@ -18,4 +18,3 @@ char *string_toupper(char *lc)
 	}
 	return (lc);
 }
-
