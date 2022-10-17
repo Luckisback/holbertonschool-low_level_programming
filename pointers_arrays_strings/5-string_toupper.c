@@ -8,7 +8,7 @@
 
 char *string_toupper(char *lc)
 {
-	int i;
+	int = 0;
 
 	while (str[i])
 	{
