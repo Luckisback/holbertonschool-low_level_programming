@@ -17,7 +17,7 @@ char *cap_string(char *phr)
 
 		if (phr[i - 1] == ';'
 			|| phr[i - 1] == '"'
-			|| phr[i - 1] == '('
+			|| phr[i - 1] == '(' 
 			|| phr[i - 1] == ')'
 			|| phr[i - 1] == '{'
 			|| phr[i - 1] == '}'
@@ -27,9 +27,8 @@ char *cap_string(char *phr)
 			|| phr[i - 1] == '!'
 			|| phr[i - 1] == '.'
 			|| phr[i - 1] == ' '
-			|| phr[i - 1] == ','
-			|| i == 0)
-				phr[i] -= 32;
+			|| phr[i - 1] == ',' || i == 0)
+			phr[i] -= 32;
 		i++;
 	}
 	return (phr);
