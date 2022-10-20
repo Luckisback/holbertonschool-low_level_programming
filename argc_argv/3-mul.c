@@ -16,9 +16,12 @@ int main(int argc, char *argv[])
 	if (argc < 1 || argc > 3)
 	{
 		printf("Error");
-		return (1);}
-	res = atoi(argv[1]) * atoi(argv[2]);
-	printf("%d\n", res);
+		return (1);
+	}
+	else
+	{
+		res = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", res);
+	}
 	return (0);
 }
-
