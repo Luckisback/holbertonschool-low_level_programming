@@ -11,11 +11,9 @@ int main(int argc, char *argv[])
 {
 	int res;
 
-	res = 0;
-
 	if (argc != 3)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 	else
