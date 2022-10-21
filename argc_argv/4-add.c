@@ -12,13 +12,20 @@
 
 int main(int argc, char *argv[])
 {
-	int val, i;
+	int val, i, j;
 
-	for (i = 0; i < argc; i++)
+	val = 0;
+
+	for (i = 1; i < argc; i++)
 	{
-		if (argc - 1 <= 0)
-			val = 0;
-		else
+		for (j = 0; argv[1][j]; j++)
+		{
+			if (isalpha(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 			val += atoi(argv[i]);
 	}
 
