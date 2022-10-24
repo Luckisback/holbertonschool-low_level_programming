@@ -10,7 +10,7 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *Myarray = malloc((sizeof(unsigned int) * size) + 1);
+	char *Myarray = malloc(sizeof(unsigned int) * size);
 	unsigned int i;
 
 	for (i = 0; i < size; i++)
@@ -24,12 +24,10 @@ char *create_array(unsigned int size, char c)
 			Myarray[i] = c;
 		}
 	}
-	if (*Myarray <= 0)
+	for (i = 0; i < size; i++)
 	{
-		return (NULL);
+		if (Myarray[i] <= 0 || Myarray[i] != c)
+			return (NULL);
 	}
-	else
-	{
-		return (Myarray);
-	}
+	return (Myarray);
 }
