@@ -24,5 +24,8 @@ char *create_array(unsigned int size, char c)
 			Myarray[i] = c;
 		}
 	}
-	return (Myarray);
+	if (*Myarray == 0)
+			return (NULL);
+	else
+		return (Myarray);
 }
