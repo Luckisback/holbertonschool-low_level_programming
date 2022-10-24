@@ -26,7 +26,7 @@ char *create_array(unsigned int size, char c)
 	}
 	for (i = 0; i < size; i++)
 	{
-		if (Myarray[i] <= 0 || Myarray[i] != c)
+		if (Myarray[i] <= 0)
 			return (NULL);
 	}
 	return (Myarray);
