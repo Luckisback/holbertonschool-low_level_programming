@@ -11,9 +11,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *Myarray = malloc((sizeof(unsigned int) * size) + 1);
-	unsigned int i;
-
-	       return (NULL);	
+	unsigned int i;	
 
 	for (i = 0; i < size; i++)
 	{
