@@ -25,7 +25,11 @@ char *create_array(unsigned int size, char c)
 		}
 	}
 	if (*Myarray == 0)
-			return (NULL);
+	{
+		return (NULL);
+	}
 	else
+	{
 		return (Myarray);
+	}
 }
