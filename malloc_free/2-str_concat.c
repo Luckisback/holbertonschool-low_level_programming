@@ -14,12 +14,10 @@ char *str_concat(char *s1, char *s2)
 	int t, c, j;
 	int i = 0;
 
-	if ((s1 != NULL && s2 == NULL) || (s1 == NULL && s2 != NULL)
-			|| (s1 == NULL && s2 == NULL))
-	{
-		*my_ptr = 1;
-		return (my_ptr);
-	}
+	if (s1 == NULL)
+	       s1 = "";	
+	if (s2 == NULL)
+	       s2 = "";
 
 	while (s1[i])
 	{
