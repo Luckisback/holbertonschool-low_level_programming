@@ -11,13 +11,13 @@
 char *_strdup(char *str)
 {
 	char *my_ptr;
-	int i = 1;
+	int i = 0;
 	int t;
 
 	while (str[i])
 		i++;
 
-	my_ptr = malloc(i);
+	my_ptr = malloc(i + 1);
 
 	if (str == NULL)
 		return (NULL);
@@ -28,6 +28,7 @@ char *_strdup(char *str)
 		{
 			return (NULL);
 		}
+		my_ptr[t] = str[t];
 	}
 	return (my_ptr);
 
