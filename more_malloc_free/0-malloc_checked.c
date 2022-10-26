@@ -9,13 +9,13 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char **ptr_b;
+	int **ptr_b;
 
 	if (b <= 0)
 		exit(98);
 	else
 	{
-		ptr_b = malloc(sizeof(char *) * b);
+		ptr_b = malloc(sizeof(int *) * b);
 		if (ptr_b == NULL)
 			exit(98);
 		else if (b >= 1024)
