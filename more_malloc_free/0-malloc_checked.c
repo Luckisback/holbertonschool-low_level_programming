@@ -9,22 +9,20 @@
 
 void *malloc_checked(unsigned int b)
 {
-	int **ptr_b;
+	void **ptr_b;
 
-	if (b <= 0)
-		exit(98);
-	else
-	{
-		ptr_b = malloc(sizeof(int *) * b);
+	ptr_b = malloc(sizeof(char *) * b);
 		if (ptr_b == NULL)
 			exit(98);
-		else if (b >= 1024)
-		{
-			ptr_b = malloc(sizeof(int *) * b);
-		}
-
-	}
-
+	ptr_b = malloc(sizeof(int *) * b);
+			if (ptr_b == NULL)
+				exit(98);
+	ptr_b = malloc(sizeof(float *) * b);
+			if (ptr_b == NULL)
+				exit(98);
+	ptr_b = malloc(sizeof(double *) * b);
+		if (ptr_b == NULL)
+			exit(98);
 	return (ptr_b);
 
 }
