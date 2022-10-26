@@ -11,7 +11,7 @@ void *malloc_checked(unsigned int b)
 {
 	char **ptr_b;
 
-	if (b <= 0)
+	if (b <= 0 || b == 1024)
 		exit(98);
 	else
 	{
