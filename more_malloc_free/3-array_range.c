@@ -9,17 +9,23 @@
  **/
 int *array_range(int min, int max)
 {
-	int *ar1d, i;
+	int *ar1d, i, t;
 
 	if (min > max)
 		return (NULL);
+	t = (max - min);
+	if (t < 0)
+		t = t * (-1);
 
 	ar1d = malloc(min * max);
 	if (ar1d == NULL)
 	{
 		return (NULL);
-		for (i = min; i <= max; i++)
-			ar1d[i] = i;
+		for (i = 0; i <= t; i++)
+		{
+			ar1d[i] = min;
+			min++;
+		}
 	}
 	return (ar1d);
 }
