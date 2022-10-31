@@ -2,7 +2,7 @@
 #define __DOG__
 #include <stdio.h>
 /**
- * struct dog - A structure 
+ * struct dog - A structure
  * @name: First member
  * @age: Second member
  * @owner: Third member
