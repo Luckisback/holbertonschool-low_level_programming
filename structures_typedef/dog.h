@@ -14,14 +14,6 @@ struct dog
 	float age;
 	char *owner;
 };
-/**
- * dog_t - A structure
- * @name: First member
- * @age: Second member
- * @owner: Third member
- * Description: Structure Dog
- */
-
 typedef struct dog dog_t;
 
 
