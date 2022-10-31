@@ -8,15 +8,12 @@
  */
 void print_dog(struct dog *d)
 {
-	if (d->name ==  NULL || d->age == 0 || d->owner == NULL)
-	{
-		if (d->name ==  NULL)
-			printf("(nil)");
-		if (d->age == 0)
-			printf("nil");
-		if (d->owner == NULL)
-			printf("(nil)");
-	}
+	if (d->name ==  NULL)
+		printf("Name: (nil)\n");
+	else if (d->age == 0)
+		printf("Age: nil\n");
+	else if (d->owner == NULL)
+		printf("(Owner: (nil)\n");
 	else
 	{
 		printf("Nane: %s\n", d->name);
@@ -24,5 +21,5 @@ void print_dog(struct dog *d)
 		printf("Owner: %s\n", d->owner);
 	}
 	if (d == NULL)
-		printf(" ");
+		return;
 }
