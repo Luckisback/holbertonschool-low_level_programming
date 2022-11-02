@@ -15,7 +15,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 		return (-1);
 	}
 
-	cmp(arra[ysize]);
+	cmp(array[ysize]);
 
 	for (size = 0; size <= 20 - 1; size++)
 	{
