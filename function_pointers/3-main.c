@@ -30,8 +30,10 @@ int main(int argc, char *argv[])
 	}
 
 	if ((num2 == 0 && *s == '/') || (num2 == 0 && *s == '%'))
-		printf("Error\n")
+	{
+		printf("Error\n");
 		return (100);
+	}
 
 	result = get_op_func(s)(num1, num2);
 
