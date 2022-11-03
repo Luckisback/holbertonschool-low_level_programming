@@ -12,27 +12,32 @@
 int main(int argc, char *argv[])
 {
 	int result = 0;
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[3]);
-	char *s = argv[2];
+	int num1;
+	int num2;
+	char *s;
+
 
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-			return (98);
+			exit(98);
 	}
 
-	if (s == NULL)
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	s = argv[2];
+
+	if (get_op_func(s) == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 
 	if ((num2 == 0 && *s == '/') || (num2 == 0 && *s == '%'))
 	{
 		printf("Error\n");
-		return (100);
+		exit(100);
 	}
 
 	result = get_op_func(s)(num1, num2);
