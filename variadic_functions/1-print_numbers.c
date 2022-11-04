@@ -15,9 +15,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
+		saisie = va_arg(num, int);
+
 		if (*separator == '\0')
 			continue;
-		saisie = va_arg(num, int);
 		printf("%d", saisie);
 
 		if (i == n - 1)
@@ -25,4 +26,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf(", ");
 	}
 	printf("\n");
+	va_end(num);
 }
