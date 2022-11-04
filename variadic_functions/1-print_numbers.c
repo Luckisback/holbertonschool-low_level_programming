@@ -17,7 +17,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		saisie = va_arg(num, int);
 
-		if (separator == NULL)
+		if (separator == NULL || separator == 0)
 			continue;
 		printf("%d", saisie);
 
