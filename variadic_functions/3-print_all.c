@@ -10,7 +10,6 @@ void pr_char(va_list len)
 	char my_var = va_arg(len, int);
 
 		printf("%c", my_var);
-		printf(", ");
 }
 
 /**
@@ -19,10 +18,9 @@ void pr_char(va_list len)
 */
 void pr_int(va_list len)
 {
-	int myint = va_arg(len, int);
+	int my_int = va_arg(len, int);
 
-	printf("%d", myint);
-	printf(", ");
+	printf("%d", my_int);
 }
 
 /**
@@ -34,7 +32,6 @@ void pr_float(va_list len)
 	double my_fl = va_arg(len, double);
 
 	printf("%f", my_fl);
-	printf(", ");
 }
 
 /**
@@ -50,7 +47,6 @@ void pr_string(va_list len)
 		str = "(nil)";
 
 	printf("%s", str);
-	printf(", ");
 }
 
 /**
@@ -71,6 +67,7 @@ void print_all(const char * const format, ...)
 	va_list len;
 	int i = 0;
 	int j;
+	char *space;
 
 	va_start(len, format);
 
@@ -81,11 +78,12 @@ void print_all(const char * const format, ...)
 		{
 			if (*ops[j].typeV == format[i])
 			{
+				printf("%s", space);
 				ops[j].f(len);
+				space = ", ";
 			}
 			j++;
 		}
-		j = 0;
 		i++;
 	}
 	printf("\n");
