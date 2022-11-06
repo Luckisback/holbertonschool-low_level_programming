@@ -8,6 +8,7 @@
 void pr_char(va_list len)
 {
 	char my_var = va_arg(len, int);
+
 		printf("%c", my_var);
 		printf(", ");
 }
@@ -19,6 +20,7 @@ void pr_char(va_list len)
 void pr_int(va_list len)
 {
 	int myint = va_arg(len, int);
+
 	printf("%d", myint);
 	printf(", ");
 }
@@ -30,6 +32,7 @@ void pr_int(va_list len)
 void pr_float(va_list len)
 {
 	double my_fl = va_arg(len, double);
+
 	printf("%f", my_fl);
 	printf(", ");
 }
