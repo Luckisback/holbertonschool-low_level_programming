@@ -67,16 +67,15 @@ void print_all(const char * const format, ...)
 	va_list len;
 	int i = 0;
 	int j;
-	char *space;
+	char *space = "";
 
 	va_start(len, format);
 
 	while (format && format[i] != '\0')
 	{
-		j = 0;
 		while (ops[j].typeV)
 		{
-			if (*ops[j].typeV == format[i])
+			if (format[i] == *ops[j].typeV)
 			{
 				printf("%s", space);
 				ops[j].f(len);
@@ -84,6 +83,7 @@ void print_all(const char * const format, ...)
 			}
 			j++;
 		}
+		j = 0;
 		i++;
 	}
 	printf("\n");
