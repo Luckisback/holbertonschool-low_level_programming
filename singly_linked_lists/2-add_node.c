@@ -9,30 +9,18 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	int len = 0;
-	int i;
+	/* Création du nouvel élément */
+	list_t *NewEl = malloc(sizeof(list_t));
 
-	list_t *NewEl = NULL;
-
-	*NewEl = malloc(sizeof(head));
-
-	while (head != NULL || head[len] != NULL)
+	if (list_t == NULL || NewEl == NULL)
 	{
-		if (head == NULL || head[len] == NULL)
-		{
-			return( NULL);
-			free(NewEl[len]);
-			free(NewEl);
-		}
-		len++;
+		return (NULL);
 	}
+	NewEl->str = *str;
 
-	NewEl = head;
+	/* Insertion de l'élément au début de la liste */
+	NewEl->next = head;
+	list_t->str = NewEl;
 
-	for (i = 0; i < len; i++)
-	{
-		NewEl[i] = malloc(sizeof(list_t));
-		NewEl[i]->str = head[i]->str;
-	}
-	return (head);
+	return (NewEl);
 }
