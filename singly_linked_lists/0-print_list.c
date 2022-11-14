@@ -8,20 +8,17 @@
 
 size_t print_list(const list_t *h)
 {
-	va_list *encours = h;
-	int i = 1;
-	int j = 0;
-
-	va_start(encours, h);
-
-	while (encours != NULL)
+	if (liste == NULL)
 	{
-		printf("[%d] %s\n", i, encours->str);
-		printf("->%d\n", i, encours->len);
-		i += 1;
-		j += va_arg(encours, char*)
+		printf("[0] (nil)";
 	}
-	if (encours == NULL)
-		printf("[0] (nil)");
-	return (j);
+
+	list_t *actuel = h;
+
+	while (actuel != NULL)
+	{
+		printf("[%d] -> %s", actuel->len, actuel->str);
+		actuel = actuel->next;
+	}
+	printf("NULL\n");
 }
