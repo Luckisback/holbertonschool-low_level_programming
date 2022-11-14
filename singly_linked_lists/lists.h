@@ -1,6 +1,9 @@
 #ifndef __LISTSCHAIN__
 #define __LISTSCHAIN__
-
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+#include <stdlib.h>
 
 /**
  * struct list_s - singly linked list
