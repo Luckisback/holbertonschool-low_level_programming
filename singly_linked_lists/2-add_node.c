@@ -1,26 +1,44 @@
 #include "lists.h"
 
 /**
- * struct print - the structure of printf function
- * Description: associat each data type to the function
- * @data: the type of data
- * @f: the funtion pointer to the printing functions used
+ * add_node - adds a new node at the beginning of a list
+ * @str: some value as argument
+ * @head: the head of the list
+ * Return: The address of the new head
  **/
 
 list_t *add_node(list_t **head, const char *str)
 {
-	/* Création du nouvel élément */
-	list_t *NewEl = malloc(sizeof(list_t));
+	list_t *NewEl;
+	char *New_str;
+	int New_lgr = 0;
 
-	if (list_t == NULL || NewEl == NULL)
+
+	/* allocation de l'espace memoire au nouvel élément */
+	NewEl = malloc(sizeof(list_t));
+
+	if (!NewEl)
 	{
+		free(NewEl);
 		return (NULL);
 	}
-	NewEl->str = *str;
 
-	/* Insertion de l'élément au début de la liste */
-	NewEl->next = head;
-	list_t->str = NewEl;
+	New_str = strdup(str);
+
+	if (!New_str)
+	{
+		free(New_str);
+		return (NULL);
+	}
+
+	while (New_str[New_lgr])
+		New_lgr++;
+
+	NewEl->str = New_str;
+	NewEl->len = New_lgr;
+	NewEl->next = *head;
+
+	*head = NewEl;
 
 	return (NewEl);
 }
