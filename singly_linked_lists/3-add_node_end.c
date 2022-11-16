@@ -9,7 +9,7 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-        list_t *NewEl;
+        list_t *NewEl, *Swap;
         char *New_str;
         int New_lgr = 0;
 
@@ -34,11 +34,21 @@ list_t *add_node_end(list_t **head, const char *str)
         while (str[New_lgr])
                 New_lgr++;
 
+	if (*head == NULL)
+	{
+		*head = NewEl;
+	}
+	else
+	{
+		Swap = *head;
+		while (Swap->next != NULL)
+			Swap = Swap->next;
+	}
         NewEl->str = New_str;
         NewEl->len = New_lgr;
         NewEl->next = NULL;
 
-        *head->next = NewEl;
+        Swap->next = NewEl;
 
         return (NewEl);
 }
