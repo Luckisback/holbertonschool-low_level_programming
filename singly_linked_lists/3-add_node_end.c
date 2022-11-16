@@ -15,15 +15,15 @@ list_t *add_node_end(list_t **head, const char *str)
 
 
         /* allocation de l'espace memoire au nouvel élément */
-        NewEl = malloc(sizeof(list_t));
+	NewEl = malloc(sizeof(list_t));
 
-        if (!NewEl)
-        {
-                free(NewEl);
-                return (NULL);
-        }
+	if (!NewEl)
+	{
+		free(NewEl);
+		return (NULL);
+	}
 
-        New_str = strdup(str);
+	New_str = strdup(str);
 
         if (New_str == NULL)
         {
@@ -33,6 +33,10 @@ list_t *add_node_end(list_t **head, const char *str)
 
         while (str[New_lgr])
                 New_lgr++;
+
+        NewEl->str = New_str;
+        NewEl->len = New_lgr;
+        NewEl->next = NULL;
 
 	if (*head == NULL)
 	{
@@ -44,9 +48,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		while (Swap->next != NULL)
 			Swap = Swap->next;
 	}
-        NewEl->str = New_str;
-        NewEl->len = New_lgr;
-        NewEl->next = NULL;
 
         Swap->next = NewEl;
 
