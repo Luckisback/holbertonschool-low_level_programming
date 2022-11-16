@@ -25,13 +25,13 @@ list_t *add_node(list_t **head, const char *str)
 
 	New_str = strdup(str);
 
-	if (!New_str)
+	if (New_str == NULL)
 	{
 		free(New_str);
 		return (NULL);
 	}
 
-	while (New_str[New_lgr])
+	while (str[New_lgr])
 		New_lgr++;
 
 	NewEl->str = New_str;
