@@ -28,6 +28,9 @@ unsigned int binary_to_uint(const char *b)
 	int i, x;
 	unsigned int result = 0;
 
+	if (b == NULL)
+		return (0);
+
 	while (b[L_bin] != '\0')
 		L_bin++;
 	x = 0;
@@ -37,7 +40,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		position_bit = L_bin - (L_bin - x);
 
-		if ((b[i] != '1' && b[i] != '0') || b[i] == '\0')
+		if (b[i] != '1' && b[i] != '0')
 			return (0);
 		else if (b[i] == '1')
 		{
