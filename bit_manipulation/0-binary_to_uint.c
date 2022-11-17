@@ -22,7 +22,10 @@ int _pow_recursion(int x, int y)
  **/
 unsigned int binary_to_uint(const char *b)
 {
-	int L_bin = 0; int position_bit = 0; int poids = 0; int i, x;
+	int L_bin = 0;
+	int position_bit = 0;
+	int poids = 0;
+	int i, x;
 	unsigned int result = 0;
 
 	while (b[L_bin] != '\0')
