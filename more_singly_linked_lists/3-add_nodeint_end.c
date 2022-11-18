@@ -6,34 +6,34 @@
  * @n:the argument
  * Return: the address of the new node
  **/
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *end_node;
-	listint_t *Newnode;
+	listint_t *end;
+	listint_t *Newend;
 
-	Newnode = malloc(sizeof(listint_t));
-	if (!Newnode)
+	Newend = malloc(sizeof(listint_t));
+	if (!Newend)
 	{
-		free(Newnode);
+		free(Newend);
 		return (NULL);
 	}
-	Newnode->n = n;
-	Newnode->next = NULL;
+	Newend->n = n;
+	Newend->next = NULL;
 
 	if (*head == NULL)
 	{
-		*head = Newnode;
+		*head = Newend;
 	}
 	else
 	{
-		end_node = *head;
-		while (end_node->next != NULL)
+		end = *head;
+		while (end->next != NULL)
 		{
-			end_node = end_node->next;
+			end = end->next;
 		}
-		end_node->next = Newnode;
+		end->next = Newend;
 	}
-	return (Newnode);
+	return (Newend);
 }
 
 
