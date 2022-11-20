@@ -7,10 +7,10 @@
  *
  * Return: listint_t ptr
 */
-listint_t	*get_nodeint_at_index(listint_t *head, unsigned int index)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t	*r;
-	unsigned int	x;
+	listint_t *r;
+	unsigned int x;
 
 	if (!head)
 		return (0);
