@@ -3,7 +3,7 @@
 /**
  * read_textfile - a function that reads a text file and prints
  * @filename: the name of the file to be read
- * @lettre: a structure
+ * @lettres: the number of letters in the file
  *
  **/
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -13,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
-		return(0);
+		return (0);
 
 	ouvrir = open(filename, O_RDONLY);
 
