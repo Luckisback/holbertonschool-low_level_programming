@@ -15,16 +15,16 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
-	nom = open(filename, O_APPEND);
 	if (nom == -1)
 		return (-1);
 	if (text_content == NULL)
 		return (-1);
 	for (nbr_l = 0; text_content[nbr_l]; nbr_l++)
 		;
+	nom = open(filename, O_WRONLY | O_APPEND);
 	ecrire = write(nom, text_content, nbr_l);
 
-	if (ecrire == -1)
+	if (ecrire == -1 || nom == -1)
 		return (-1);
 	close(nom);
 	return (1);
