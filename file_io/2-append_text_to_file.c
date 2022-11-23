@@ -19,9 +19,10 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		for (nbr_l = 0; text_content[nbr_l]; nbr_l++)
 		;
+		ecrire = write(nom, text_content, nbr_l);
 	}
+
 	nom = open(filename, O_RDWR | O_APPEND);
-	ecrire = write(nom, text_content, nbr_l);
 
 	if (ecrire == -1 || nom == -1)
 		return (-1);
