@@ -1,45 +1,42 @@
 #include "lists.h"
 /**
- * delete_dnodeint_at_index - a function that inserts a new node at a given position.
- * @index: the index of the list where the new node should be added
+ * insert_dnodeint_at_index - a function that inserts a new node
+ * @h: the header of the list
+ * @idx: the index of the list where the new node should be added
+ * @n: a element of the list
  * Return: the address of the new node
- *
  **/
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int len;
-	dlistint_t **newnode;
+	dlistint_t *htmp;
+	dlistint_t *newnode;
 	unsigned int i = 0;
 
-	while (h) /*the number of the lists element*/
-	{
-		(*h) = (*h)->next;
-		len++;
-	}
-	for (i = 0; i >= idx; i++) /*finding the node corresponding to the node index*/
+	newnode = malloc(sizeof(dlistint_t));
+	if (newnode == NULL)
+		return (NULL);
 
+	newnode->n = n;
+	htmp = *h;
+
+	if (idx == 0) /* add to the beginning */
+		return (add_dnodeint(h, n));
+
+	for (i = 0; i < (idx - 1); i++) /*finding the index node*/
 	{
-		if (h == NULL)
+		if (htmp == NULL || htmp->next == NULL)
 			return (NULL);
-		(*h) = (*h)->next;
+		htmp = htmp->next;
+	}
 
-		if (idx == 0) /* add to the beginning */
-			add_dnodeint(h, n);
+		newnode->next = htmp->next;
+		newnode->prev = htmp;
+		htmp->next = newnode;
 
-		if (idx == len) /* add to the end */
-			add_dnodeint_end(h, n);
-
-		/* Case  i = idx */
-		newnode = malloc(sizeof(dlistint_t));
-		if (newnode == NULL)
+		if (newnode->next != NULL)
 		{
-			free(newnode);
-			return (NULL);
+			htmp = newnode->next;
+			htmp->prev = newnode;
 		}
-
-		(*newnode)->n = n;
-		(*newnode)->next = (*h)->next;
-		(*newnode)->prev = *newnode;
-	}
-	return (*newnode);
+	return (newnode);
 }
