@@ -4,6 +4,7 @@
  * linear_search - a function that searches for a value in an array of integers
  * @array: is a pointer to the first element
  * @size: is the number of elements in array
+ * @value: is the value to search for
  * Return: he first index where value is located
  **/
 int linear_search(int *array, size_t size, int value)
@@ -17,9 +18,9 @@ int linear_search(int *array, size_t size, int value)
 
 		if (array[i] == value)
 		{
-			return i;
+			return (i);
 			printf("\n");
 		}
 	}
-	return -1;
+	return (-1);
 }
